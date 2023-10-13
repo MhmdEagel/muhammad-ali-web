@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-primary text-textPrimary
+}
+
+
+
+
+@layer components {
+    .mobile-nav {
+        @apply fixed bg-secondary top-0 right-0 bottom-0 h-full px-14 font-gideonRoman;
+    }
+}
