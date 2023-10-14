@@ -1,24 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseCircle, AiOutlineArrowRight } from "react-icons/ai";
 
-export default function Navbar() {
-  const [showSide, setShowSide] = useState(false);
-
-  function displayStyle () {
-    return showSide ? {display : "block"} : {display: "none"}
+export default function Navbar({ showSide, onNavClickHandle, onNavClickHideHandle }) {
+  function displayStyle() {
+    return showSide ? { display: "block" } : { display: "none" };
   }
 
-  
-  function onNavClickHandle() {
-    setShowSide(true);
-  }
-  
-  function onNavClickHideHandle()  {
-    setShowSide(false);
-  }
-  
   function MobileNav() {
     return (
       <div className="mobile-nav" style={displayStyle()}>
@@ -59,10 +48,10 @@ export default function Navbar() {
     <nav className="text-textPrimary p-4 font-youngSerif fixed top-0 left-0 right-0 z-30 bg-primary">
       <div className="flex items-center">
         <h1 className="text-xl mr-auto">Muhammad Ali</h1>
-        <ul className="sm:flex gap-6 hidden">
+        <ul className="sm:flex gap-6 hidden [&>*]:cursor-pointer">
           <li>Home</li>
           <li>About</li>
-          <li>Contact</li>  
+          <li>Contact</li>
         </ul>
         <span
           className="text-xl sm:hidden cursor-pointer"

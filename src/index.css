@@ -13,4 +13,10 @@ body {
     .mobile-nav {
         @apply fixed bg-secondary top-0 right-0 bottom-0 h-full px-14 font-gideonRoman;
     }
+
+    .triangle {
+        @apply w-0 h-0 border-solid rotate-0;
+        border-width: 0 39.5px 68.4px 39.5px;
+        border-color: transparent transparent #ddd transparent;
+    }
 }
